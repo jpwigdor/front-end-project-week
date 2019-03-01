@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+
+import NavBar from "./Components/NavBar";
+
 import './App.css';
 
 export default class App extends Component {
@@ -13,6 +17,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
+        <Route path="/" render={ (props) => {return(<NavBar {...props}/>)}} />
         {/* <Nav Component here - make it so it shows on all views /> */}
         {/* <ListView Component here - contains all note cards and notes /> */}
         {/* <NewNote Component here - have note title field and note content /> */}
