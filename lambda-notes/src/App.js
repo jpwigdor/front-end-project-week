@@ -19,7 +19,7 @@ export default class App extends Component {
       <div className="app">
         <Route path="/" render={ (props) => {return(<NavBar {...props}/>)}} />
         {/* <Nav Component here - make it so it shows on all views /> */}
-        {/* <ListView Component here - contains all note cards and notes /> */}
+        {/* <NoteList Component here - contains all note cards and notes /> */}
         {/* <NewNote Component here - have note title field and note content /> */}
         {/* <ViewNote Component here - edit/delete function included /> */}
         {/* <EditNote Component here - edit/delete function included /> */}
