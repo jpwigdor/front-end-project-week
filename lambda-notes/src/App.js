@@ -4,6 +4,19 @@ import { Route } from 'react-router-dom';
 import NavBar from "./Components/NavBar";
 
 import './App.css';
+import { notEqual } from 'assert';
+
+//TODO: 
+/* 
+  -Pull the API data
+  -Display it on a note
+  -Map out the notes to display all notes
+  -Make each note clickable and load the Edit Note page
+  -Create edit note functionality for Title and Body
+  -Push those changes to the server for storage
+  -Create Delete Note funtionality, removing the ID from the server via a modal
+  -Create a New Note functionality
+*/
 
 export default class App extends Component {
   constructor() {
