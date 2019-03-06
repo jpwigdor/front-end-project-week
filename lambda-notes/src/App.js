@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import axios from "axios";
+import NoteList from "./Components/NoteList";
 
 import NavBar from "./Components/NavBar";
 
 import './App.css';
-import { notEqual } from 'assert';
 
 //TODO: 
 /* 
@@ -18,19 +19,29 @@ import { notEqual } from 'assert';
   -Create a New Note functionality
 */
 
+
+
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
+      notes: [],
       error: ""
     };
   }
 
+  componentDidMount() {
+    axios.get('https://fe-notes.herokuapp.com/note/get/all')
+      .then(res => this.setState({notes: res.data.id}))
+      .catch(err => console.log(err));
+  }
+  
 
   render() {
     return (
       <div className="app">
         <Route path="/" render={ (props) => {return(<NavBar {...props}/>)}} />
+        <NoteList notes={this.state.note}/>
         {/* <Nav Component here - make it so it shows on all views /> */}
         {/* <NoteList Component here - contains all note cards and notes /> */}
         {/* <NewNote Component here - have note title field and note content /> */}
