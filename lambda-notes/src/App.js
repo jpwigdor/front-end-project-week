@@ -31,9 +31,18 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://fe-notes.herokuapp.com/note/get/all')
-      .then(res => this.setState({notes: res.data.id}))
+    this.fetch();
+  }
+
+  fetch = () => {
+    axios
+      .get('https://fe-notes.herokuapp.com/note/get/all')
+      .then(res => this.setState({notes: res.data}))
       .catch(err => console.log(err));
+  };
+
+  handleViewNotes = () => {
+    this.setState({buttons:{create:false, view:true}})
   }
   
 
