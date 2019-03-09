@@ -51,7 +51,8 @@ export default class App extends Component {
       <div className="app">
         <Route path="/" render={ (props) => {return(<NavBar {...props}/>)}} />
         <NoteList notes={this.state.note}/>
-        <Route exact path="/" render={ (props) => ( <NoteList {...props} notesList={this.state.notesData} />
+        
+        <Route exact path="/" render={ (props) => ( <NoteList {...props} notesList={this.state.notes} />
             )}
           />
 
