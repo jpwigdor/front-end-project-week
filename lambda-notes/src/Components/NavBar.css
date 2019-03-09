@@ -1,4 +1,23 @@
 .nav-bar-container {
-  background-color: grey;
-  width: 30%;
+  display: flex;
+}
+
+.nav-bar {
+  background-color: rgb(230, 227, 227);
+  border: 1px rgb(20, 20, 20);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.nav-title {
+  color: rgb(83, 83, 83)
+}
+
+.button {
+  width: 40%;
 }
