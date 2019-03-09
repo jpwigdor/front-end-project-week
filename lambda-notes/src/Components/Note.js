@@ -1,8 +1,8 @@
 import React from "react";
 
-//TODO:
+
 const Note = (props) => {
-  const note = props.notes? props.notes.find(note=>`${note.id}` === props.match.params.id):props.note;
+  const note = props.notes ? props.notes.find(note=>`${note.id}` === props.match.params.id):props.note;
 
   return(
     <div>

@@ -38,7 +38,7 @@ export default class App extends Component {
     axios
       .get('https://fe-notes.herokuapp.com/note/get/all')
       .then(res => this.setState({notes: res.data}))
-      .catch(err => console.log(err));
+      .catch(err => console.log("Error Loadion", err));
   };
 
   handleViewNotes = () => {
@@ -51,7 +51,6 @@ export default class App extends Component {
       <div className="app">
         <Route path="/" render={ (props) => {return(<NavBar {...props}/>)}} />
         <NoteList notes={this.state.note}/>
-        
         <Route exact path="/" render={ (props) => ( <NoteList {...props} notesList={this.state.notes} />
             )}
           />
