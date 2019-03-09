@@ -12,16 +12,18 @@ class NoteList extends React.Component {
 
   render() {
     return(
-      <div className="App">
-        <h1>Notes</h1>
-        <div className="NotesList">
-          {this.state.notes.map(note => {
-            return(
-              <div key={note._id}>
-              <div>{note.title}</div>
-              <div>{note.textBody}</div>
-            </div>
-            ) 
+      <div className="note-container">
+        <h1>Your Notes:</h1>
+        <div className="note-card">
+          {props.notes.map(note => {
+            <h1 className="note-subject"
+                onClick={() => props.history.push(`/${note._id}`)}
+            >
+              {note.title}
+            </h1>
+            <p> {note.textBody}</p>
+
+/////////////////////
           })}
         </div>
       </div>

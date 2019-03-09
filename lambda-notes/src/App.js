@@ -51,6 +51,10 @@ export default class App extends Component {
       <div className="app">
         <Route path="/" render={ (props) => {return(<NavBar {...props}/>)}} />
         <NoteList notes={this.state.note}/>
+        <Route exact path="/" render={ (props) => ( <NoteList {...props} notesList={this.state.notesData} />
+            )}
+          />
+
         {/* <Nav Component here - make it so it shows on all views /> */}
         {/* <NoteList Component here - contains all note cards and notes /> */}
         {/* <NewNote Component here - have note title field and note content /> */}
