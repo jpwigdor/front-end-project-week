@@ -38,7 +38,7 @@ export default class App extends Component {
     axios
       .get('https://fe-notes.herokuapp.com/note/get/all')
       .then(res => this.setState({notes: res.data}))
-      .catch(err => console.log("Error Loadion", err));
+      .catch(err => console.log("Error Loadion",err));
   };
 
   handleViewNotes = () => {
